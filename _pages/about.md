@@ -10,7 +10,7 @@ redirect_from:
 I am an M.S. student in Robotics at the Southern University of Science and Technology (SUSTech), advised by [Prof. Wei Zhang](https://faculty.sustech.edu.cn/?tagid=zhangw3&go=2) in the [CLEAR Lab](https://www.wzhanglab.site/). Before that, I received my B.S. in Mechanical Engineering from Wuhan University of Technology (WHUT) in July 2024.
 
 My research interests lie at the intersection of Machine Learning and Robotics. I focus on developing generalist manipulation policies from in-the-wild manipulation videos.
-##
+
 <br>
 
 # Education Background
