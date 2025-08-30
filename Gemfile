@@ -23,5 +23,10 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
 end
+
+# Pin webrick to 1.8.1 for compatibility with jekyll 3.9.x
+gem "webrick", "= 1.8.1"
+
+# Enable Faraday retry middleware required by github-pages stack
+gem "faraday-retry"
