@@ -11,9 +11,9 @@ title                    : "Home"
 title_separator          : "-"
 name                     : &name "张枭雄"
 description              : &description "personal description"
-url                      : https://xiaoxiongzzzz.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "xiaoxiongzzzz/xiaoxiongzzzz.github.io"
+url                      : https://Xiaoxiongzzzz.github.io # 将此处改为您的GitHub Pages URL
+baseurl                  : "" # 保持为空
+repository               : "Xiaoxiongzzzz/Xiaoxiongzzzz.github.io" # 改为您的仓库地址
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
