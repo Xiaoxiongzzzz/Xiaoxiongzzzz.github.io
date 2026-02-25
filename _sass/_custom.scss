@@ -142,3 +142,77 @@ a {
     color: $accent;
   }
 }
+
+// ─── Page Content ───────────────────────────────────────────────
+#main {
+  background-color: $warm-bg;
+}
+
+.page__content {
+  // H2: replace bottom border with left accent bar
+  h2 {
+    border-bottom: none;
+    border-left: 3px solid $accent;
+    padding-left: 0.6em;
+    padding-bottom: 0;
+  }
+
+  // H1: tighten tracking
+  h1 {
+    letter-spacing: -0.01em;
+  }
+
+  // Blockquote: warm accent tint
+  blockquote {
+    border-left-color: $accent;
+    background-color: rgba(74, 124, 107, 0.05);
+    border-radius: 0 4px 4px 0;
+    padding: 0.8em 1.2em;
+  }
+
+  // Links in content: underline-slide on hover
+  a {
+    color: $accent;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: $accent-dark;
+      border-bottom-color: $accent;
+      text-decoration: none;
+    }
+  }
+
+  // Publication table: borderless with hover row tint
+  table {
+    border: none;
+    border-collapse: collapse;
+
+    tr {
+      border: none;
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: rgba(74, 124, 107, 0.04);
+      }
+    }
+
+    td {
+      border: none;
+    }
+  }
+}
+
+// Venue labels (e.g., <i>CoRL 2025</i>) — small-caps accent color
+.page__content strong i,
+.page__content b i {
+  font-variant: small-caps;
+  color: $accent;
+  font-style: normal;
+}
+
+// HR
+hr {
+  border-top-color: $border-warm;
+}
