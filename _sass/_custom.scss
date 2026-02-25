@@ -271,7 +271,7 @@ hr {
 
 .edu-dot {
   position: absolute;
-  left: -1.85em;
+  left: -1.62em;
   top: 0.35em;
   width: 9px;
   height: 9px;
@@ -308,7 +308,7 @@ hr {
   gap: 1.4em;
   align-items: flex-start;
   padding: 1.2em 1.4em;
-  background: rgba(136, 150, 179, 0.07);
+  background: rgba($accent, 0.07);
   border: 1px solid $border-warm;
   border-radius: 6px;
   margin-top: 1em;
