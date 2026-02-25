@@ -216,3 +216,24 @@ a {
 hr {
   border-top-color: $border-warm;
 }
+
+// ─── Footer ─────────────────────────────────────────────────────
+.page__footer {
+  background-color: $footer-bg;
+  border-top: 1px solid $border-subtle;
+  color: $muted-text;
+
+  a {
+    color: $muted-text;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+    }
+  }
+
+  .fas, .fab, .far, .fal {
+    color: $accent;
+  }
+}
