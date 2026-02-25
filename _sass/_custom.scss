@@ -1,0 +1,41 @@
+// ================================================================
+//  CUSTOM OVERRIDES — Warm & Scholarly Theme
+//  Appended last in main.scss; wins CSS cascade over all defaults.
+// ================================================================
+
+// ─── Color tokens (SCSS-only, used below) ───────────────────────
+$warm-bg:       #faf8f5;
+$warm-text:     #2c2825;
+$accent:        #4a7c6b;
+$accent-dark:   #2d5c4d;
+$border-warm:   #e8e2d9;
+$border-subtle: #e0d8cc;
+$footer-bg:     #f0ece4;
+$muted-text:    #5a5450;
+
+// ─── Global ─────────────────────────────────────────────────────
+body {
+  background-color: $warm-bg;
+  color: $warm-text;
+  font-family: 'Lato', sans-serif;
+}
+
+// ─── Typography ─────────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: $warm-text;
+}
+
+// ─── Links (global) ─────────────────────────────────────────────
+a {
+  color: $accent;
+
+  &:visited {
+    color: mix(#fff, $accent, 20%);
+  }
+
+  &:hover,
+  &:active {
+    color: $accent-dark;
+  }
+}
