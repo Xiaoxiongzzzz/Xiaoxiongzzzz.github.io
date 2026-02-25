@@ -93,3 +93,52 @@ a {
     }
   }
 }
+
+// ─── Author Sidebar ─────────────────────────────────────────────
+.author__avatar img {
+  border-radius: 50%;
+  border: 3px solid $accent;
+  box-shadow: 0 2px 12px rgba(74, 124, 107, 0.18);
+}
+
+.author__name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1em;
+  color: $warm-text;
+}
+
+.author__bio {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: $muted-text;
+}
+
+// "Follow" button
+.author__urls-wrapper .btn--inverse {
+  border-color: $accent;
+  color: $accent;
+
+  &:hover {
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+// Social links
+.author__urls {
+  a {
+    color: $warm-text;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  // Icons
+  .fa, .fas, .fab, .far, .ai {
+    color: $accent;
+  }
+}
