@@ -1,17 +1,19 @@
 // ================================================================
-//  CUSTOM OVERRIDES — Warm & Scholarly Theme
+//  CUSTOM OVERRIDES — Shunji Iwai Aesthetic
+//  Palette: hazy lavender-white, dusty slate blue, film-grain melancholy
+//  Inspired by Love Letter / All About Lily Chou-Chou / Hana and Alice
 //  Appended last in main.scss; wins CSS cascade over all defaults.
 // ================================================================
 
 // ─── Color tokens (SCSS-only, used below) ───────────────────────
-$warm-bg:       #faf8f5;
-$warm-text:     #2c2825;
-$accent:        #4a7c6b;
-$accent-dark:   #2d5c4d;
-$border-warm:   #e8e2d9;
-$border-subtle: #e0d8cc;
-$footer-bg:     #f0ece4;
-$muted-text:    #5a5450;
+$warm-bg:       #f5f3f8;  // 岩井雪白：极浅薰衣草白，如《情书》雪景天光
+$warm-text:     #2d3142;  // 忧郁深蓝灰，非纯黑——像胶片底色的暗部
+$accent:        #8896b3;  // 粉笔蓝/石板蓝，《情书》天空与《莉莉周》田野雾霭
+$accent-dark:   #5c6d8e;  // 深石板蓝，悬停态
+$border-warm:   #ddd8e8;  // 柔和薰衣草灰边框
+$border-subtle: #d0c9e0;  // 淡丁香色细线
+$footer-bg:     #ece9f4;  // 薰衣草色页脚，如《花与爱丽丝》薄暮调
+$muted-text:    #6e6f82;  // 蓝灰色柔和辅助文字
 
 // ─── Global ─────────────────────────────────────────────────────
 body {
@@ -96,9 +98,9 @@ a {
 
 // ─── Author Sidebar ─────────────────────────────────────────────
 .author__avatar img {
-  border-radius: 50%;
+  border-radius: 4px;
   border: 3px solid $accent;
-  box-shadow: 0 2px 12px rgba(74, 124, 107, 0.18);
+  box-shadow: 0 2px 12px rgba(136, 150, 179, 0.22);
 }
 
 .author__name {
