@@ -98,6 +98,10 @@ a {
 
 // ─── Author Sidebar ─────────────────────────────────────────────
 .author__avatar img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
   border-radius: 4px;
   border: 3px solid $accent;
   box-shadow: 0 2px 12px rgba(136, 150, 179, 0.22);
@@ -246,4 +250,183 @@ hr {
   .fas, .fab, .far, .fal {
     color: $accent;
   }
+}
+
+// ─── Education Timeline ──────────────────────────────────────────
+.edu-timeline {
+  border-left: 2px solid $accent;
+  margin-left: 6px;
+  padding-left: 1.4em;
+  margin-top: 1em;
+}
+
+.edu-entry {
+  position: relative;
+  margin-bottom: 1.6em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.edu-dot {
+  position: absolute;
+  left: -1.85em;
+  top: 0.35em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $accent;
+  border: 2px solid $warm-bg;
+  box-shadow: 0 0 0 1.5px $accent;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+
+.edu-date {
+  font-size: 0.85em;
+  font-style: italic;
+  color: $muted-text;
+  white-space: nowrap;
+}
+
+.edu-degree {
+  margin-top: 0.2em;
+  font-size: 0.92em;
+  color: $muted-text;
+}
+
+// ─── Publication Card ────────────────────────────────────────────
+.pub-card {
+  display: flex;
+  gap: 1.4em;
+  align-items: flex-start;
+  padding: 1.2em 1.4em;
+  background: rgba(136, 150, 179, 0.07);
+  border: 1px solid $border-warm;
+  border-radius: 6px;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+.pub-media {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+.pub-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.pub-info {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.pub-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.02em;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $warm-text;
+}
+
+.pub-authors {
+  font-size: 0.9em;
+  color: $muted-text;
+  line-height: 1.5;
+}
+
+.pub-venue {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 0.18em 0.6em;
+  background: $accent;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.pub-link {
+  font-size: 0.9em;
+  color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-bottom-color: $accent;
+    text-decoration: none;
+  }
+}
+
+// ─── Honors & Awards ─────────────────────────────────────────────
+.award-list {
+  margin-top: 1em;
+}
+
+.award-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.65em 0;
+  border-bottom: 1px solid $border-warm;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.award-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.award-org {
+  font-size: 0.85em;
+  color: $muted-text;
+}
+
+.award-year {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 0.18em 0.55em;
+  background: $accent;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
