@@ -3,7 +3,7 @@ permalink: /
 title: "Xiaoxiong Zhang"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -15,61 +15,82 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
 
 <br>
 
-# Education Background
-<div style="display:flex; align-items:baseline;">
-  <strong>Southern University of Science and Technology (SUSTech)</strong>
-  <span style="margin-left:auto;">Sep. 2024 – Now</span>
-</div>
-<em>Master in Control Science and Engineering</em> 
+## Education Background
 
-<div style="height:0.0rem"></div> <!-- small spacing -->
-
-<div style="display:flex; align-items:baseline;">
-  <strong>Wuhan University of Technology (WHUT)</strong>
-  <span style="margin-left:auto;">Sep. 2020 – Jul 2024</span>
+<div class="edu-timeline">
+  <div class="edu-entry">
+    <div class="edu-dot"></div>
+    <div class="edu-body">
+      <div class="edu-header">
+        <strong>Southern University of Science and Technology (SUSTech)</strong>
+        <span class="edu-date">Sep. 2024 – Now</span>
+      </div>
+      <div class="edu-degree">Master in Control Science and Engineering</div>
+    </div>
+  </div>
+  <div class="edu-entry">
+    <div class="edu-dot"></div>
+    <div class="edu-body">
+      <div class="edu-header">
+        <strong>Wuhan University of Technology (WHUT)</strong>
+        <span class="edu-date">Sep. 2020 – Jul 2024</span>
+      </div>
+      <div class="edu-degree">Bachelor of Engineering in Mechanical Engineering &nbsp;·&nbsp; GPA: <strong>4.28/5.0</strong> &nbsp;·&nbsp; Rank: <strong>2/178</strong></div>
+    </div>
+  </div>
 </div>
-<em>Bachelor of Engineering in Mechanical Engineering</em> | GPA: <strong>4.28/5.0</strong>, Rank: <strong>2/178</strong>
 
 <br>
 
-# Publications
+## Publications
 
-<table>
-  <tr>
-    <td style="width:40%;">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/fGzu_huiuvE" frameborder="0" allowfullscreen></iframe>
-    </td>
-    <td style="width:60%; vertical-align:top; padding-left:10px;">
-      <b style="font-size:130%;">Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation</b><br>
-      <a href="https://clearlab-sustech.github.io/gvf-tape/" style="font-size:130%">[project page]</a><br> 
-      <span style="font-size:130%;">
-      Chuye Zhang*, <strong>Xiaoxiong Zhang*</strong>, Wei Pan, Linfang Zheng<sup>†</sup>, Wei Zhang<sup>†</sup>
-      </span><br>
-      <strong><i style="font-size:130%;">CoRL 2025</i></strong>
-    </td>
-  </tr>
-</table>
+<div class="pub-card">
+  <div class="pub-media">
+    <div class="pub-video-wrap">
+      <iframe src="https://www.youtube.com/embed/fGzu_huiuvE" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="pub-info">
+    <div class="pub-title">Generative Visual Foresight Meets Task-Agnostic Pose Estimation in Robotic Table-top Manipulation</div>
+    <div class="pub-authors">Chuye Zhang*, <strong>Xiaoxiong Zhang*</strong>, Wei Pan, Linfang Zheng<sup>†</sup>, Wei Zhang<sup>†</sup></div>
+    <div class="pub-venue">
+      <span class="venue-badge">CoRL 2025</span>
+      <a href="https://clearlab-sustech.github.io/gvf-tape/" class="pub-link">[project page]</a>
+    </div>
+  </div>
+</div>
 
 <br>
 
-# Honors & Awards
+## Honors & Awards
 
-<div style="display:flex; align-items:baseline;">
-  <strong>Outstanding Graduate</strong>, Wuhan University of Technology
-  <span style="margin-left:auto;">2024</span>
-</div>
-
-<div style="display:flex; align-items:baseline;">
-  <strong>University Merit Student Award(Top 1%)</strong>, Wuhan University of Technology
-  <span style="margin-left:auto;">2022</span>
-</div>
-
-<div style="display:flex; align-items:baseline;">
-  <strong>National Scholarship (Top 2%)</strong>, Wuhan University of Technology
-  <span style="margin-left:auto;">2022</span>
-</div>
-
-<div style="display:flex; align-items:baseline;">
-  <strong>National Scholarship (Top 2%)</strong>, Wuhan University of Technology
-  <span style="margin-left:auto;">2021</span>
+<div class="award-list">
+  <div class="award-entry">
+    <div class="award-body">
+      <strong>Outstanding Graduate</strong>
+      <span class="award-org">Wuhan University of Technology</span>
+    </div>
+    <span class="award-year">2024</span>
+  </div>
+  <div class="award-entry">
+    <div class="award-body">
+      <strong>University Merit Student Award (Top 1%)</strong>
+      <span class="award-org">Wuhan University of Technology</span>
+    </div>
+    <span class="award-year">2022</span>
+  </div>
+  <div class="award-entry">
+    <div class="award-body">
+      <strong>National Scholarship (Top 2%)</strong>
+      <span class="award-org">Wuhan University of Technology</span>
+    </div>
+    <span class="award-year">2022</span>
+  </div>
+  <div class="award-entry">
+    <div class="award-body">
+      <strong>National Scholarship (Top 2%)</strong>
+      <span class="award-org">Wuhan University of Technology</span>
+    </div>
+    <span class="award-year">2021</span>
+  </div>
 </div>
