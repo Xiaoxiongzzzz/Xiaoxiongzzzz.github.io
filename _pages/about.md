@@ -2,6 +2,7 @@
 permalink: /
 title: "Xiaoxiong Zhang"
 excerpt: "About me"
+description: "Xiaoxiong Zhang — M.S. student in Robotics at SUSTech (CLEAR Lab), advised by Prof. Wei Zhang. Research on generalist robot manipulation policies from in-the-wild manipulation videos."
 author_profile: true
 redirect_from:
   - /about/
@@ -47,7 +48,7 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
 <div class="pub-card">
   <div class="pub-media">
     <div class="pub-video-wrap">
-      <iframe src="https://www.youtube.com/embed/fGzu_huiuvE" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/fGzu_huiuvE" title="GVF-TAPE project video" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <div class="pub-info">

@@ -1,18 +1,11 @@
 # Authors
+# Used only when a post/page sets `author:` to one of these keys.
+# The site's default author profile lives in _config.yml.
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+Xiaoxiong Zhang:
+  name          : "Xiaoxiong Zhang"
+  bio           : "M.S. Student in Robotics"
+  avatar        : "zxx.png"
+  email         : "12433017@mail.sustech.edu.cn"
+  googlescholar : "https://scholar.google.com/citations?user=RMoZ_8IAAAAJ&hl=zh-CN"
+  github        : "Xiaoxiongzzzz"
