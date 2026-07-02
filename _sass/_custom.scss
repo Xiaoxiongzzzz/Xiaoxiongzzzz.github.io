@@ -8,12 +8,17 @@
 // ─── Color tokens (SCSS-only, used below) ───────────────────────
 $warm-bg:       #f5f3f8;  // 岩井雪白：极浅薰衣草白，如《情书》雪景天光
 $warm-text:     #2d3142;  // 忧郁深蓝灰，非纯黑——像胶片底色的暗部
-$accent:        #8896b3;  // 粉笔蓝/石板蓝，《情书》天空与《莉莉周》田野雾霭
+$accent:        #8896b3;  // 粉笔蓝/石板蓝，《情书》天空与《莉莉周》田野雾霭（装饰用）
 $accent-dark:   #5c6d8e;  // 深石板蓝，悬停态
+$accent-ink:    #4c5c7d;  // 更深的墨石板蓝：链接与实心徽章文字（在淡背景上达到 WCAG-AA 对比度）
 $border-warm:   #ddd8e8;  // 柔和薰衣草灰边框
 $border-subtle: #d0c9e0;  // 淡丁香色细线
 $footer-bg:     #ece9f4;  // 薰衣草色页脚，如《花与爱丽丝》薄暮调
-$muted-text:    #6e6f82;  // 蓝灰色柔和辅助文字
+$muted-text:    #63647a;  // 蓝灰色柔和辅助文字（略加深以提升可读性）
+
+// 柔和弥散阴影，呼应岩井「朦胧」质感（非硬边投影）
+$card-shadow:   0 1px 2px rgba(45, 49, 66, 0.04), 0 8px 24px rgba(45, 49, 66, 0.06);
+$card-shadow-h: 0 2px 4px rgba(45, 49, 66, 0.06), 0 14px 32px rgba(45, 49, 66, 0.10);
 
 // ─── Global ─────────────────────────────────────────────────────
 body {
@@ -30,15 +35,15 @@ h1, h2, h3, h4, h5, h6 {
 
 // ─── Links (global) ─────────────────────────────────────────────
 a {
-  color: $accent;
+  color: $accent-ink;
 
   &:visited {
-    color: mix(#fff, $accent, 20%);
+    color: mix($muted-text, $accent-ink, 35%);
   }
 
   &:hover,
   &:active {
-    color: $accent-dark;
+    color: darken($accent-ink, 10%);
   }
 }
 
@@ -77,7 +82,7 @@ a {
 
   // Mobile hamburger button
   button {
-    background-color: $accent;
+    background-color: $accent-ink;
   }
 
   // Overflow dropdown
@@ -102,9 +107,9 @@ a {
   width: 110px;
   height: 110px;
   object-fit: cover;
-  border-radius: 4px;
-  border: 3px solid $accent;
-  box-shadow: 0 2px 12px rgba(136, 150, 179, 0.22);
+  border-radius: 6px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px $border-subtle, 0 4px 16px rgba(76, 92, 125, 0.22);
 }
 
 .author__name {
@@ -123,10 +128,12 @@ a {
 // "Follow" button
 .author__urls-wrapper .btn--inverse {
   border-color: $accent;
-  color: $accent;
+  color: $accent-ink;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    background-color: $accent;
+    background-color: $accent-ink;
+    border-color: $accent-ink;
     color: #fff;
   }
 }
@@ -139,13 +146,13 @@ a {
     transition: color 0.2s ease;
 
     &:hover {
-      color: $accent;
+      color: $accent-ink;
     }
   }
 
-  // Icons
+  // Icons — slightly deeper slate so they read clearly at small sizes
   .fa, .fas, .fab, .far, .ai {
-    color: $accent;
+    color: $accent-dark;
   }
 }
 
@@ -155,17 +162,26 @@ a {
 }
 
 .page__content {
-  // H2: replace bottom border with left accent bar
+  // H2: replace bottom border with left accent bar + consistent vertical rhythm
+  // (section spacing is handled here, not with manual <br> tags in the markdown)
   h2 {
     border-bottom: none;
     border-left: 3px solid $accent;
     padding-left: 0.6em;
     padding-bottom: 0;
+    margin-top: 2.6em;
+    margin-bottom: 0.9em;
+    letter-spacing: 0.005em;
   }
 
   // H1: tighten tracking
   h1 {
     letter-spacing: -0.01em;
+  }
+
+  // Body copy: a touch more line-height for an airy, readable measure
+  p {
+    line-height: 1.7;
   }
 
   // Blockquote: warm accent tint
@@ -176,15 +192,15 @@ a {
     padding: 0.8em 1.2em;
   }
 
-  // Links in content: underline-slide on hover
+  // Links in content: deeper ink for readability, accent underline slides in on hover
   a {
-    color: $accent;
+    color: $accent-ink;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid rgba($accent, 0.35);
     transition: border-color 0.2s ease, color 0.2s ease;
 
     &:hover {
-      color: $accent-dark;
+      color: darken($accent-ink, 10%);
       border-bottom-color: $accent;
       text-decoration: none;
     }
@@ -252,26 +268,34 @@ hr {
   }
 }
 
-// ─── Education Timeline ──────────────────────────────────────────
+// ─── Education / Experience Timeline ─────────────────────────────
 .edu-timeline {
+  // Line softly fades toward the bottom — a hazy, filmic gradient
   border-left: 2px solid $accent;
+  border-image: linear-gradient(180deg, $accent 0%, rgba($accent, 0.15) 100%) 1;
   margin-left: 6px;
-  padding-left: 1.4em;
+  padding-left: 1.5em;
   margin-top: 1em;
 }
 
 .edu-entry {
   position: relative;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.7em;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  // Dot fills to ink and its halo grows when the entry is hovered
+  &:hover .edu-dot {
+    background-color: $accent-ink;
+    box-shadow: 0 0 0 3px rgba($accent, 0.35);
   }
 }
 
 .edu-dot {
   position: absolute;
-  left: -1.62em;
+  left: -1.71em;
   top: 0.35em;
   width: 9px;
   height: 9px;
@@ -279,6 +303,7 @@ hr {
   background-color: $accent;
   border: 2px solid $warm-bg;
   box-shadow: 0 0 0 1.5px $accent;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .edu-header {
@@ -287,6 +312,10 @@ hr {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.3em;
+
+  strong {
+    font-size: 1.03em;
+  }
 }
 
 .edu-date {
@@ -297,7 +326,7 @@ hr {
 }
 
 .edu-degree {
-  margin-top: 0.2em;
+  margin-top: 0.25em;
   font-size: 0.92em;
   color: $muted-text;
 }
@@ -307,12 +336,19 @@ hr {
   display: flex;
   gap: 1.4em;
   align-items: flex-start;
-  padding: 1.2em 1.4em;
-  background: rgba($accent, 0.07);
+  padding: 1.3em 1.5em;
+  background: rgba($accent, 0.05);
   border: 1px solid $border-warm;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: $card-shadow;
   margin-top: 1em;
   flex-wrap: wrap;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $card-shadow-h;
+  }
 }
 
 .pub-media {
@@ -368,10 +404,10 @@ hr {
 
 .venue-badge {
   display: inline-block;
-  padding: 0.18em 0.6em;
-  background: $accent;
+  padding: 0.2em 0.65em;
+  background: $accent-ink;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -379,12 +415,14 @@ hr {
 
 .pub-link {
   font-size: 0.9em;
-  color: $accent;
+  color: $accent-ink;
+  font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
+    color: darken($accent-ink, 10%);
     border-bottom-color: $accent;
     text-decoration: none;
   }
@@ -400,8 +438,15 @@ hr {
   align-items: center;
   justify-content: space-between;
   gap: 1em;
-  padding: 0.65em 0;
+  padding: 0.7em 0.7em;
+  margin: 0 -0.7em;
+  border-radius: 6px;
   border-bottom: 1px solid $border-warm;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: rgba($accent, 0.06);
+  }
 
   &:last-child {
     border-bottom: none;
@@ -422,10 +467,10 @@ hr {
 .award-year {
   flex-shrink: 0;
   display: inline-block;
-  padding: 0.18em 0.55em;
-  background: $accent;
+  padding: 0.2em 0.6em;
+  background: $accent-ink;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 0.75em;
   font-weight: 700;
   letter-spacing: 0.04em;

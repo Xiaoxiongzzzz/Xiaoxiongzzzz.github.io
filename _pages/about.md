@@ -8,15 +8,13 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an M.S. student in Robotics at the Southern University of Science and Technology (SUSTech), advised by [Prof. Wei Zhang](https://faculty.sustech.edu.cn/?tagid=zhangw3&go=2) in the [CLEAR Lab](https://www.wzhanglab.site/). Before that, I received my B.S. in Mechanical Engineering from Wuhan University of Technology (WHUT) in July 2024.
+I am an M.S. student in Robotics at the Southern University of Science and Technology (SUSTech), advised by [Prof. Wei Zhang](https://faculty.sustech.edu.cn/?tagid=zhangw3&go=2) in the [CLEAR Lab](https://www.wzhanglab.site/). Earlier, I earned my B.S. in Mechanical Engineering from Wuhan University of Technology (WHUT) in 2024.
 
-My research interests lie at the intersection of Machine Learning and Robotics. I focus on developing generalist manipulation policies from in-the-wild manipulation videos.
+My research sits at the intersection of **machine learning and robotics**, where I develop generalist manipulation policies that learn from in-the-wild human videos.
 
-I welcome inquiries and correspondence. Please feel free to contact me at: 12433017@mail.sustech.edu.cn.
+Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.sustech.edu.cn).
 
-<br>
-
-## Education Background
+## Education
 
 <div class="edu-timeline">
   <div class="edu-entry">
@@ -24,7 +22,7 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
     <div class="edu-body">
       <div class="edu-header">
         <strong>Southern University of Science and Technology (SUSTech)</strong>
-        <span class="edu-date">Sep. 2024 – Now</span>
+        <span class="edu-date">Sep. 2024 – Present</span>
       </div>
       <div class="edu-degree">Master in Control Science and Engineering</div>
     </div>
@@ -34,14 +32,12 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
     <div class="edu-body">
       <div class="edu-header">
         <strong>Wuhan University of Technology (WHUT)</strong>
-        <span class="edu-date">Sep. 2020 – Jul 2024</span>
+        <span class="edu-date">Sep. 2020 – Jul. 2024</span>
       </div>
       <div class="edu-degree">Bachelor of Engineering in Mechanical Engineering &nbsp;·&nbsp; GPA: <strong>4.28/5.0</strong> &nbsp;·&nbsp; Rank: <strong>2/178</strong></div>
     </div>
   </div>
 </div>
-
-<br>
 
 ## Experience
 
@@ -51,7 +47,7 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="https://wuji.tech/en" target="_blank" rel="noopener noreferrer">Wuji Tech</a></strong>
-        <span class="edu-date">Jul. 2026 – Now</span>
+        <span class="edu-date">Jul. 2026 – Present</span>
       </div>
       <div class="edu-degree">Research Intern &nbsp;·&nbsp; Egocentric Pre-training</div>
     </div>
@@ -67,8 +63,6 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
     </div>
   </div>
 </div>
-
-<br>
 
 ## Publications
 
@@ -87,8 +81,6 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
     </div>
   </div>
 </div>
-
-<br>
 
 ## Honors & Awards
 
