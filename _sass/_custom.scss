@@ -1,24 +1,24 @@
 // ================================================================
-//  CUSTOM OVERRIDES — Shunji Iwai Aesthetic
-//  Palette: hazy lavender-white, dusty slate blue, film-grain melancholy
-//  Inspired by Love Letter / All About Lily Chou-Chou / Hana and Alice
+//  CUSTOM OVERRIDES — Warm Paper / Terracotta
+//  Palette: warm ivory paper, espresso ink, terracotta accent.
+//  Soft, editorial, filmic — kept airy and understated.
 //  Appended last in main.scss; wins CSS cascade over all defaults.
 // ================================================================
 
 // ─── Color tokens (SCSS-only, used below) ───────────────────────
-$warm-bg:       #f5f3f8;  // 岩井雪白：极浅薰衣草白，如《情书》雪景天光
-$warm-text:     #2d3142;  // 忧郁深蓝灰，非纯黑——像胶片底色的暗部
-$accent:        #8896b3;  // 粉笔蓝/石板蓝，《情书》天空与《莉莉周》田野雾霭（装饰用）
-$accent-dark:   #5c6d8e;  // 深石板蓝，悬停态
-$accent-ink:    #4c5c7d;  // 更深的墨石板蓝：链接与实心徽章文字（在淡背景上达到 WCAG-AA 对比度）
-$border-warm:   #ddd8e8;  // 柔和薰衣草灰边框
-$border-subtle: #d0c9e0;  // 淡丁香色细线
-$footer-bg:     #ece9f4;  // 薰衣草色页脚，如《花与爱丽丝》薄暮调
-$muted-text:    #63647a;  // 蓝灰色柔和辅助文字（略加深以提升可读性）
+$warm-bg:       #f8f5f1;  // 暖米白纸底
+$warm-text:     #2c2724;  // 浓咖墨（非纯黑，暖调暗部）
+$accent:        #b0533a;  // 赭红/陶土——装饰强调（时间线、竖条、圆点、徽章底）
+$accent-dark:   #8c3f2c;  // 深赭红，悬停态
+$accent-ink:    #a4472f;  // 链接与实心徽章文字（在暖纸底上达到 WCAG-AA 对比度）
+$border-warm:   #ece5dd;  // 柔和暖灰边框
+$border-subtle: #e0d7cc;  // 略深的暖细线（masthead / footer）
+$footer-bg:     #f1ebe3;  // 暖纸页脚，比正文略深
+$muted-text:    #73685f;  // 暖灰次要文字
 
-// 柔和弥散阴影，呼应岩井「朦胧」质感（非硬边投影）
-$card-shadow:   0 1px 2px rgba(45, 49, 66, 0.04), 0 8px 24px rgba(45, 49, 66, 0.06);
-$card-shadow-h: 0 2px 4px rgba(45, 49, 66, 0.06), 0 14px 32px rgba(45, 49, 66, 0.10);
+// 柔和弥散阴影（暖调，呼应纸感）
+$card-shadow:   0 1px 2px rgba(44, 39, 36, 0.05), 0 8px 24px rgba(44, 39, 36, 0.07);
+$card-shadow-h: 0 2px 4px rgba(44, 39, 36, 0.07), 0 14px 32px rgba(44, 39, 36, 0.12);
 
 // ─── Global ─────────────────────────────────────────────────────
 body {
@@ -109,7 +109,7 @@ a {
   object-fit: cover;
   border-radius: 6px;
   border: 3px solid #fff;
-  box-shadow: 0 0 0 1px $border-subtle, 0 4px 16px rgba(76, 92, 125, 0.22);
+  box-shadow: 0 0 0 1px $border-subtle, 0 4px 16px rgba(44, 39, 36, 0.20);
 }
 
 .author__name {
