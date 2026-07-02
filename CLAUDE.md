@@ -61,6 +61,18 @@ citation: 'Full citation string'
 ---
 ```
 
+**Blog posts** (`_posts/YYYY-MM-DD-slug.md`) render at `/blog/:title/` and are listed on the `/blog/` index (newest first, grouped by year). Minimal front matter:
+```yaml
+---
+title: "Post Title"
+date: YYYY-MM-DD
+tags: [tag-one, tag-two]
+excerpt: "One-line summary shown on the blog index."
+toc: true          # builds an in-page "Contents" card (JS, from h2/h3)
+---
+```
+Posts support Markdown, syntax-highlighted code (Rouge), tables, footnotes, and LaTeX math via MathJax 3 (`$…$` inline, `$$…$$` display). Post defaults live in `_config.yml` (`author_profile`, `read_time`, `toc`, etc.); the TOC builder is a small script in `_layouts/single.html`.
+
 **Talks** (`_talks/YYYY-MM-DD-slug.md`) and other collections follow the same pattern. The `markdown_generator/` directory contains Python scripts and Jupyter notebooks to batch-generate collection entries from TSV files.
 
 ## Important Notes

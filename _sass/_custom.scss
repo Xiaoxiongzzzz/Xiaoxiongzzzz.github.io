@@ -515,6 +515,134 @@ hr {
   }
 }
 
+// ─── Blog index (/blog/) ─────────────────────────────────────────
+.blog-intro {
+  color: $muted-text;
+  font-style: italic;
+  margin: 0.2em 0 1.6em;
+}
+
+.blog-empty {
+  color: $muted-text;
+  font-style: italic;
+}
+
+.blog-year {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05em;
+  color: $muted-text;
+  margin: 2em 0 0.8em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid $border-warm;
+
+  &:first-of-type {
+    margin-top: 0.5em;
+  }
+}
+
+.blog-item {
+  margin: 0 0 1.7em;
+}
+
+.blog-item__date {
+  display: block;
+  font-size: 0.82em;
+  font-style: italic;
+  color: $muted-text;
+  margin-bottom: 0.15em;
+}
+
+.blog-item__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.22em;
+  line-height: 1.3;
+  margin: 0 0 0.3em;
+
+  a {
+    color: $warm-text;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: $accent-ink;
+      border-bottom-color: $accent;
+    }
+  }
+}
+
+.blog-item__excerpt {
+  color: $muted-text;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 0.2em 0 0.4em;
+}
+
+.blog-tag {
+  display: inline-block;
+  font-size: 0.72em;
+  color: $accent-ink;
+  background: rgba($accent, 0.08);
+  border: 1px solid rgba($accent, 0.22);
+  border-radius: 4px;
+  padding: 0.08em 0.55em;
+  margin: 0.15em 0.35em 0.15em 0;
+}
+
+// ─── Post table of contents (inline card at top of a post) ───────
+.post-toc {
+  margin: 0.4em 0 2em;
+  padding: 1em 1.3em;
+  background: rgba($accent, 0.05);
+  border: 1px solid $border-warm;
+  border-left: 3px solid $accent;
+  border-radius: 4px;
+}
+
+.post-toc__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: $warm-text;
+  margin-bottom: 0.45em;
+}
+
+.post-toc__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+
+  li {
+    margin: 0.25em 0;
+  }
+
+  li.post-toc__sub {
+    padding-left: 1.1em;
+    font-size: 0.95em;
+  }
+
+  a {
+    color: $accent-ink;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $accent;
+    }
+  }
+}
+
+// ─── Responsive: stack publication card media on narrow screens ──
+@media (max-width: 480px) {
+  .pub-media {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 // ─── Respect reduced-motion preferences ─────────────────────────
 @media (prefers-reduced-motion: reduce) {
   * {

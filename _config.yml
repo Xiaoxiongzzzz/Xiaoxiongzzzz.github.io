@@ -192,17 +192,19 @@ collections:
 
 # Defaults
 defaults:
-  # _posts
+  # _posts (blog)
   - scope:
       path: ""
       type: posts
     values:
       layout: single
+      permalink: /blog/:title/
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
+      toc: true
+      comments: false
+      share: false
+      related: false
   # _pages
   - scope:
       path: ""
