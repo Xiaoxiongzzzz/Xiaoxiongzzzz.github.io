@@ -53,7 +53,7 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
         <strong><a href="https://wuji.tech/en" target="_blank" rel="noopener noreferrer">Wuji Tech</a></strong>
         <span class="edu-date">Jul. 2026 – Now</span>
       </div>
-      <div class="edu-degree">Research Intern</div>
+      <div class="edu-degree">Algorithm Intern &nbsp;·&nbsp; Egocentric Pre-training</div>
     </div>
   </div>
   <div class="edu-entry">
@@ -63,7 +63,7 @@ I welcome inquiries and correspondence. Please feel free to contact me at: 12433
         <strong><a href="https://www.limxdynamics.com/en" target="_blank" rel="noopener noreferrer">LimX Dynamics</a></strong>
         <span class="edu-date">Sep. 2024 – Mar. 2025</span>
       </div>
-      <div class="edu-degree">Research Intern</div>
+      <div class="edu-degree">Algorithm Intern &nbsp;·&nbsp; World Action Model</div>
     </div>
   </div>
 </div>
