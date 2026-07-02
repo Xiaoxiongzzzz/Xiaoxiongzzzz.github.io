@@ -395,6 +395,12 @@ hr {
   line-height: 1.5;
 }
 
+.pub-desc {
+  font-size: 0.9em;
+  color: $muted-text;
+  line-height: 1.55;
+}
+
 .pub-venue {
   display: flex;
   align-items: center;

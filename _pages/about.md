@@ -77,7 +77,24 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
     <div class="pub-authors">Chuye Zhang*, <strong>Xiaoxiong Zhang*</strong>, Wei Pan, Linfang Zheng<sup>†</sup>, Wei Zhang<sup>†</sup></div>
     <div class="pub-venue">
       <span class="venue-badge">CoRL 2025</span>
-      <a href="https://clearlab-sustech.github.io/gvf-tape/" class="pub-link">[project page]</a>
+      <a href="https://clearlab-sustech.github.io/gvf-tape/" class="pub-link" target="_blank" rel="noopener noreferrer">[project page]</a>
+    </div>
+  </div>
+</div>
+
+## Projects
+
+<div class="pub-card">
+  <div class="pub-info">
+    <div class="pub-title"><a href="https://clearlab-sustech.github.io/WorldModelSurvey/" target="_blank" rel="noopener noreferrer">From World Models to World Action Models: A Concise Tutorial for Robotics</a></div>
+    <div class="pub-authors"><strong>Xiaoxiong Zhang</strong>, Xiong Zeng, Wei Zhang</div>
+    <div class="pub-desc">A tutorial that frames world models as action-conditioned predictive models and charts the path to <em>world action models</em> — turning predicted futures into executable robot actions.</div>
+    <div class="pub-venue">
+      <span class="venue-badge">arXiv · 2026</span>
+      <a href="https://clearlab-sustech.github.io/WorldModelSurvey/" class="pub-link" target="_blank" rel="noopener noreferrer">[project page]</a>
+      <a href="https://clearlab-sustech.github.io/WorldModelSurvey/assets/Understanding_World_Models__A_Tutorial_Perspective.pdf" class="pub-link" target="_blank" rel="noopener noreferrer">[PDF]</a>
+      <a href="https://arxiv.org/abs/2607.00836" class="pub-link" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+      <a href="https://github.com/clearlab-sustech/WorldModelSurvey" class="pub-link" target="_blank" rel="noopener noreferrer">[code]</a>
     </div>
   </div>
 </div>
