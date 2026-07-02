@@ -12,13 +12,6 @@ I am an M.S. student in Robotics at the Southern University of Science and Techn
 
 My research sits at the intersection of **machine learning and robotics**, where I develop generalist manipulation policies that learn from in-the-wild human videos.
 
-<div class="interests">
-  <span class="interest-tag">Robotic Manipulation</span>
-  <span class="interest-tag">Generative Model</span>
-  <span class="interest-tag">World Action Model</span>
-  <span class="interest-tag">Large-scale Pre-training</span>
-</div>
-
 Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.sustech.edu.cn).
 
 ## Education

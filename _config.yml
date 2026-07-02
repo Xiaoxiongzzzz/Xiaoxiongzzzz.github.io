@@ -86,6 +86,11 @@ author:
   avatar           : "zxx.png"
   bio              : "M.S. Student in Robotics"
   location         : "Shenzhen, China"
+  research_interests:
+    - "Robotic Manipulation"
+    - "Generative Model"
+    - "World Action Model"
+    - "Large-scale Pre-training"
   employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=RMoZ_8IAAAAJ&hl=zh-CN"

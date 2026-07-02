@@ -268,28 +268,40 @@ hr {
   }
 }
 
-// ─── Research Interest Tags ──────────────────────────────────────
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 0.9em 0 0.2em;
+// ─── Research Interests (author sidebar, under the links) ────────
+.author__interests {
+  margin: 1em 0 0.5em;
+  padding-top: 0.85em;
+  border-top: 1px solid $border-warm;
 }
 
-.interest-tag {
-  display: inline-block;
-  padding: 0.28em 0.75em;
-  font-size: 0.82em;
-  line-height: 1.3;
-  color: $accent-ink;
-  background: rgba($accent, 0.08);
-  border: 1px solid rgba($accent, 0.28);
-  border-radius: 999px;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+.author__interests-title {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $muted-text;
+  margin-bottom: 0.6em;
+}
 
-  &:hover {
-    background: rgba($accent, 0.14);
-    border-color: rgba($accent, 0.45);
+.author__interests-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+
+  li {
+    font-size: 0.72em;
+    line-height: 1.3;
+    color: $accent-ink;
+    background: rgba($accent, 0.08);
+    border: 1px solid rgba($accent, 0.25);
+    border-radius: 999px;
+    padding: 0.22em 0.62em;
   }
 }
 

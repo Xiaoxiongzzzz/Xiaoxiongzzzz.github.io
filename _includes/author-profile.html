@@ -119,5 +119,14 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
 {% endif %}
     </ul>
+
+    {% if author.research_interests %}
+    <div class="author__interests">
+      <span class="author__interests-title">Research Interests</span>
+      <ul class="author__interests-list">
+        {% for interest in author.research_interests %}<li>{{ interest }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </div>
 </div>
