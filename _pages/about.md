@@ -14,8 +14,9 @@ My research sits at the intersection of **machine learning and robotics**, where
 
 <div class="interests">
   <span class="interest-tag">Robotic Manipulation</span>
-  <span class="interest-tag">Learning from Human Videos</span>
-  <span class="interest-tag">World &amp; Vision-Language-Action Models</span>
+  <span class="interest-tag">Generative Model</span>
+  <span class="interest-tag">World Action Model</span>
+  <span class="interest-tag">Large-scale Pre-training</span>
 </div>
 
 Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.sustech.edu.cn).
