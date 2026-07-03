@@ -24,12 +24,12 @@ $card-shadow-h: 0 2px 4px rgba(44, 39, 36, 0.07), 0 14px 32px rgba(44, 39, 36, 0
 body {
   background-color: $warm-bg;
   color: $warm-text;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Newsreader', Georgia, serif;
 }
 
 // ─── Typography ─────────────────────────────────────────────────
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: $warm-text;
 }
 
@@ -53,9 +53,9 @@ a {
   border-bottom-color: $border-subtle;
 }
 
-// Site title: italic Playfair
+// Site title: italic Fraunces
 .masthead__menu-item--lg a {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -66,7 +66,7 @@ a {
   background: $warm-bg;
 
   a {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Newsreader', Georgia, serif;
     color: $warm-text;
 
     &:hover {
@@ -113,13 +113,13 @@ a {
 }
 
 .author__name {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.1em;
   color: $warm-text;
 }
 
 .author__bio {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-weight: 300;
   font-style: italic;
   color: $muted-text;
@@ -408,7 +408,7 @@ hr {
 }
 
 .pub-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.02em;
   font-weight: 700;
   line-height: 1.4;
@@ -529,7 +529,7 @@ hr {
 }
 
 .blog-year {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.05em;
   color: $muted-text;
   margin: 2em 0 0.8em;
@@ -554,7 +554,7 @@ hr {
 }
 
 .blog-item__title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.22em;
   line-height: 1.3;
   margin: 0 0 0.3em;
@@ -601,7 +601,7 @@ hr {
 }
 
 .post-toc__title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-weight: 700;
   font-size: 0.95em;
   color: $warm-text;
