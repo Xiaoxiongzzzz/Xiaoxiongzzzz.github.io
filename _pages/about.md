@@ -39,7 +39,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
   </div>
 </div>
 
-## Experience
+## Internships
 
 <div class="edu-timeline">
   <div class="edu-entry">
