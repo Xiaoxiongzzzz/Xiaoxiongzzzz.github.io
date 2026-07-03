@@ -21,7 +21,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
     <div class="edu-dot"></div>
     <div class="edu-body">
       <div class="edu-header">
-        <strong>Southern University of Science and Technology (SUSTech)</strong>
+        <strong><a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener noreferrer">Southern University of Science and Technology (SUSTech)</a></strong>
         <span class="edu-date">Sep. 2024 – Present</span>
       </div>
       <div class="edu-degree">Master in Control Science and Engineering</div>
@@ -31,7 +31,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
     <div class="edu-dot"></div>
     <div class="edu-body">
       <div class="edu-header">
-        <strong>Wuhan University of Technology (WHUT)</strong>
+        <strong><a href="http://english.whut.edu.cn/" target="_blank" rel="noopener noreferrer">Wuhan University of Technology (WHUT)</a></strong>
         <span class="edu-date">Sep. 2020 – Jul. 2024</span>
       </div>
       <div class="edu-degree">Bachelor of Engineering in Mechanical Engineering &nbsp;·&nbsp; GPA: <strong>4.28/5.0</strong> &nbsp;·&nbsp; Rank: <strong>2/178</strong></div>
