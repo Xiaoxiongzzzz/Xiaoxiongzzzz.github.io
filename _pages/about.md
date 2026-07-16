@@ -46,7 +46,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
 <div class="edu-timeline">
   <div class="edu-entry">
     <div class="edu-dot"></div>
-    <img class="edu-logo" src="{{ '/images/logos/wuji.png' | relative_url }}" alt="Wuji Tech logo" loading="lazy">
+    <img class="edu-logo is-wordmark" src="{{ '/images/logos/wuji.png' | relative_url }}" alt="Wuji Tech logo" loading="lazy">
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="https://wuji.tech/en" target="_blank" rel="noopener noreferrer">Wuji Tech</a></strong>

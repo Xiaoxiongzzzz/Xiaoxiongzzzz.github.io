@@ -340,6 +340,15 @@ hr {
   border-radius: 10px;
   box-shadow: $card-shadow;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  // Wordmark logos (e.g. Wuji) render white on the brand's dark chip
+  &.is-wordmark {
+    width: auto;
+    max-width: 160px;
+    padding: 7px 13px;
+    background: #0e0e0e;
+    border-color: rgba(14, 14, 14, 0.25);
+  }
 }
 
 .edu-body {
