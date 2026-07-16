@@ -307,6 +307,9 @@ hr {
 .edu-entry {
   position: relative;
   margin-bottom: 1.7em;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9em;
 
   &:last-child {
     margin-bottom: 0;
@@ -317,6 +320,31 @@ hr {
     background-color: $accent-ink;
     box-shadow: 0 0 0 3px rgba($accent, 0.35);
   }
+
+  // Logo lifts slightly on hover
+  &:hover .edu-logo {
+    box-shadow: $card-shadow-h;
+    transform: translateY(-1px);
+  }
+}
+
+// Institution / company logo tile
+.edu-logo {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid $border-warm;
+  border-radius: 10px;
+  box-shadow: $card-shadow;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edu-body {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .edu-dot {

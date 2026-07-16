@@ -19,6 +19,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
 <div class="edu-timeline">
   <div class="edu-entry">
     <div class="edu-dot"></div>
+    <img class="edu-logo" src="{{ '/images/logos/sustech.png' | relative_url }}" alt="SUSTech logo" loading="lazy">
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener noreferrer">Southern University of Science and Technology (SUSTech)</a></strong>
@@ -29,6 +30,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
   </div>
   <div class="edu-entry">
     <div class="edu-dot"></div>
+    <img class="edu-logo" src="{{ '/images/logos/whut.png' | relative_url }}" alt="Wuhan University of Technology logo" loading="lazy">
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="http://english.whut.edu.cn/" target="_blank" rel="noopener noreferrer">Wuhan University of Technology (WHUT)</a></strong>
@@ -44,6 +46,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
 <div class="edu-timeline">
   <div class="edu-entry">
     <div class="edu-dot"></div>
+    <img class="edu-logo" src="{{ '/images/logos/wuji.png' | relative_url }}" alt="Wuji Tech logo" loading="lazy">
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="https://wuji.tech/en" target="_blank" rel="noopener noreferrer">Wuji Tech</a></strong>
@@ -54,6 +57,7 @@ Feel free to reach out at [12433017@mail.sustech.edu.cn](mailto:12433017@mail.su
   </div>
   <div class="edu-entry">
     <div class="edu-dot"></div>
+    <img class="edu-logo" src="{{ '/images/logos/limx.png' | relative_url }}" alt="LimX Dynamics logo" loading="lazy">
     <div class="edu-body">
       <div class="edu-header">
         <strong><a href="https://www.limxdynamics.com/en" target="_blank" rel="noopener noreferrer">LimX Dynamics</a></strong>
