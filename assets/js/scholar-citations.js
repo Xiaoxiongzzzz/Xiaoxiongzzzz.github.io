@@ -24,7 +24,10 @@
     .then(function (d) {
       var n = d && (d.citedby != null ? d.citedby : d.data && d.data.citedby);
       if (n == null) return;
-      el.textContent = n;
+      el.textContent = "citation: ";
+      var b = document.createElement("strong");
+      b.textContent = n;
+      el.appendChild(b);
       el.title =
         "Citations (Google Scholar)" +
         (d.updated ? ", updated " + d.updated.slice(0, 10) : "");
