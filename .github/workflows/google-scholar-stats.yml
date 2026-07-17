@@ -1,0 +1,43 @@
+name: Google Scholar stats
+
+# Crawls the Google Scholar citation count daily and publishes it to the
+# `google-scholar-stats` branch. The homepage fetches that JSON client-side
+# (assets/js/scholar-citations.js) to show the count in the sidebar.
+
+on:
+  schedule:
+    # 04:17 UTC daily (off-peak, off-round minute)
+    - cron: "17 4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install scholarly
+        run: pip install scholarly
+
+      - name: Fetch citation stats
+        run: python scripts/gs_crawler.py
+
+      - name: Publish to google-scholar-stats branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./results
+          publish_branch: google-scholar-stats
+          keep_files: false
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "Update Google Scholar stats"

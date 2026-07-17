@@ -680,6 +680,15 @@ hr {
   }
 }
 
+// ─── Google Scholar citation count (sidebar) ────────────────────
+// Filled in by assets/js/scholar-citations.js from the daily crawl.
+.gs-citations {
+  font-size: 0.82em;
+  font-style: italic;
+  color: $muted-text;
+  white-space: nowrap;
+}
+
 // ─── Respect reduced-motion preferences ─────────────────────────
 @media (prefers-reduced-motion: reduce) {
   * {
