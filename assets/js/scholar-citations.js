@@ -24,8 +24,11 @@
     .then(function (d) {
       var n = d && (d.citedby != null ? d.citedby : d.data && d.data.citedby);
       if (n == null) return;
-      el.textContent = "· " + n + " citations";
-      if (d.updated) el.title = "Google Scholar citations, updated " + d.updated;
+      el.textContent = n;
+      el.title =
+        "Citations (Google Scholar)" +
+        (d.updated ? ", updated " + d.updated.slice(0, 10) : "");
+      el.setAttribute("aria-label", n + " citations on Google Scholar");
       el.hidden = false;
     })
     .catch(function () {

@@ -681,12 +681,22 @@ hr {
 }
 
 // ─── Google Scholar citation count (sidebar) ────────────────────
-// Filled in by assets/js/scholar-citations.js from the daily crawl.
+// A compact pill showing the citation number, filled in by
+// assets/js/scholar-citations.js from the daily crawl. Styled to match
+// the sidebar interest tags.
 .gs-citations {
-  font-size: 0.82em;
-  font-style: italic;
-  color: $muted-text;
+  display: inline-block;
+  margin-left: 0.35em;
+  padding: 0.02em 0.5em;
+  font-size: 0.72em;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $accent-ink;
+  background: rgba($accent, 0.1);
+  border: 1px solid rgba($accent, 0.22);
+  border-radius: 999px;
   white-space: nowrap;
+  vertical-align: middle;
 }
 
 // ─── Respect reduced-motion preferences ─────────────────────────
