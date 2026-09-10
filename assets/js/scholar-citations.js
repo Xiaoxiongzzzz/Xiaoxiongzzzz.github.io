@@ -11,8 +11,8 @@
   var el = document.getElementById("gs-citations");
   if (!el) return;
 
-  // peaceiris/actions-gh-pages publishes the contents of ./results to the
-  // root of the google-scholar-stats branch, so gs_data.json sits at the root.
+  // The workflow publishes results/ to the root of the google-scholar-stats
+  // branch, so gs_data.json sits at the root.
   var URL =
     "https://raw.githubusercontent.com/Xiaoxiongzzzz/Xiaoxiongzzzz.github.io/google-scholar-stats/gs_data.json";
 

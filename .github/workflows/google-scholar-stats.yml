@@ -1,43 +1,142 @@
 name: Google Scholar stats
 
 # Crawls the Google Scholar citation count daily and publishes it to the
-# `google-scholar-stats` branch. The homepage fetches that JSON client-side
+# `google-scholar-stats` branch (gs_data.json + gs_data_shieldsio.json at the
+# branch root). The homepage fetches that JSON client-side
 # (assets/js/scholar-citations.js) to show the count in the sidebar.
+#
+# Google Scholar blocks most datacenter IPs, so the public profile page is
+# fetched from three independent hosted-runner pools and the freshest
+# successful result wins. If every pool is blocked and the SERPAPI_KEY
+# repository secret is set (https://serpapi.com, free tier is enough for one
+# call a day), SerpApi is used as a fallback. If nothing works, the previously
+# published data is kept and the run stays green; it only fails (and emails
+# you) once that data is older than STALE_DAYS.
 
 on:
   schedule:
-    # 04:17 UTC daily (off-peak, off-round minute)
+    # 04:17 UTC daily (off-round minute; GitHub may delay scheduled runs)
     - cron: "17 4 * * *"
   workflow_dispatch: {}
+  push:
+    # Only the default branch may publish; it is also the only branch whose
+    # schedule runs. Changes to the pipeline get an immediate run on merge.
+    branches: [master]
+    paths:
+      - ".github/workflows/google-scholar-stats.yml"
+      - "scripts/gs_crawler.py"
+      - "scripts/test_gs_crawler.py"
 
-permissions:
-  contents: write
+concurrency:
+  group: google-scholar-stats
+  cancel-in-progress: false
+
+env:
+  STATS_BRANCH: google-scholar-stats
+  STALE_DAYS: "14"
 
 jobs:
   crawl:
-    runs-on: ubuntu-latest
+    name: crawl (${{ matrix.runner }})
+    runs-on: ${{ matrix.runner }}
+    permissions:
+      contents: read
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        # Different runner pools use different egress IP ranges, so each one is
+        # an independent chance of not being blocked by Scholar.
+        runner: [ubuntu-latest, ubuntu-24.04-arm, macos-latest]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install scholarly
-        run: pip install scholarly
+      - name: Self-test the crawler
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
 
       - name: Fetch citation stats
-        run: python scripts/gs_crawler.py
+        env:
+          RUNNER_LABEL: ${{ matrix.runner }}
+        # Exit code 2 means "blocked / no data". That is expected on some
+        # pools, so it is not a step failure; the publish job decides what to
+        # do with whatever succeeded. Any other non-zero exit still fails.
+        run: |
+          python3 scripts/gs_crawler.py fetch --out results --label "$RUNNER_LABEL" || [ "$?" -eq 2 ]
 
-      - name: Publish to google-scholar-stats branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload result
+        if: hashFiles('results/gs_data.json') != ''
+        uses: actions/upload-artifact@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./results
-          publish_branch: google-scholar-stats
-          keep_files: false
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
-          commit_message: "Update Google Scholar stats"
+          name: gs-data-${{ matrix.runner }}
+          path: results/
+          if-no-files-found: error
+          retention-days: 3
+
+  publish:
+    needs: crawl
+    # Runs after every crawl leg (blocked legs included), but only master may
+    # publish: a workflow_dispatch from another branch just exercises the crawl.
+    if: ${{ !cancelled() && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Download crawl results
+        # A pattern that matches no artifact (every pool blocked) is not an
+        # error for download-artifact; resolve then keeps the previous data.
+        uses: actions/download-artifact@v8
+        with:
+          pattern: gs-data-*
+          path: collected
+
+      - name: Check out the stats branch
+        run: |
+          set -euo pipefail
+          # ls-remote --exit-code: 0 = branch exists, 2 = no such branch,
+          # anything else = could not ask the remote (fail, do not guess).
+          rc=0
+          git ls-remote --exit-code --heads origin "$STATS_BRANCH" >/dev/null || rc=$?
+          if [ "$rc" -eq 0 ]; then
+            git fetch --depth=1 origin "$STATS_BRANCH"
+            git worktree add --detach stats FETCH_HEAD
+          elif [ "$rc" -eq 2 ]; then
+            echo "::notice::Branch $STATS_BRANCH does not exist yet; it will be created."
+            git worktree add --detach stats HEAD
+            git -C stats checkout --orphan "$STATS_BRANCH"
+            git -C stats rm -rfq .
+          else
+            echo "::error::Could not query origin for $STATS_BRANCH (git ls-remote exit $rc)."
+            exit "$rc"
+          fi
+
+      - name: Pick the result to publish
+        id: resolve
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: >-
+          python3 scripts/gs_crawler.py resolve
+          --collected collected
+          --previous stats/gs_data.json
+          --out results
+          --stale-days "$STALE_DAYS"
+
+      - name: Publish to the stats branch
+        if: steps.resolve.outputs.publish == 'true'
+        run: |
+          set -euo pipefail
+          cp results/gs_data.json results/gs_data_shieldsio.json stats/
+          cd stats
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="github-actions[bot]@users.noreply.github.com" \
+              commit -m "Update Google Scholar stats ($GITHUB_SHA)"
+          git push origin "HEAD:refs/heads/$STATS_BRANCH"
