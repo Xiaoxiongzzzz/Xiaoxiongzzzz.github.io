@@ -11,6 +11,6 @@
     "2026": 12
   },
   "source": "scholar.google.com",
-  "runner": "ubuntu-latest",
-  "updated": "2026-10-28T10:37:40+00:00"
+  "runner": "ubuntu-24.04-arm",
+  "updated": "2026-10-30T10:53:34+00:00"
 }
