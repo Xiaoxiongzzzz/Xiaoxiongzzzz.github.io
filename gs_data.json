@@ -1,16 +1,16 @@
 {
   "name": "Xiaoxiong Zhang",
-  "citedby": 15,
-  "citedby5y": 15,
+  "citedby": 16,
+  "citedby5y": 16,
   "hindex": 2,
   "hindex5y": 2,
-  "i10index": 0,
-  "i10index5y": 0,
+  "i10index": 1,
+  "i10index5y": 1,
   "cites_per_year": {
     "2025": 2,
-    "2026": 13
+    "2026": 14
   },
   "source": "scholar.google.com",
   "runner": "ubuntu-latest",
-  "updated": "2026-11-04T12:13:07+00:00"
+  "updated": "2026-11-05T12:26:18+00:00"
 }
